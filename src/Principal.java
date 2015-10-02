@@ -5,7 +5,6 @@
 public class Principal extends javax.swing.JFrame {
 
     private Pessoa objPessoa;
-    private Frota objFrota;
     private Locacao objLocacao;
     
     public Principal() {
@@ -14,7 +13,6 @@ public class Principal extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
         
         this.objPessoa = new Pessoa();
-        this.objFrota = new Frota();
         this.objLocacao = new Locacao();
     }
 
@@ -136,7 +134,9 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemClienteActionPerformed
 
     private void jMenuItemFrotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFrotaActionPerformed
-        objFrota.setVisible(true); //OBS: TROCAR IMPLENTAÇÃO!
+        FrotaVeiculos frota = new FrotaVeiculos();
+        this.jDesktopPanePrincipal.add(frota);
+        frota.show();
     }//GEN-LAST:event_jMenuItemFrotaActionPerformed
 
     private void jMenuItemDevolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDevolucaoActionPerformed
