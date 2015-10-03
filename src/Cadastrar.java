@@ -1,14 +1,46 @@
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Diego Pedro Marques
  */
 public class Cadastrar extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form Cadastrar
-     */
+     private PessoaActionListener listener;
+    private List<Pessoa> lista = new ArrayList<>();
+    private String nome;
+    private String sobrenome;
+    private Integer idade;
+    private Integer cpf;
+    private String sexo;
+    private String Masculino="Masculino";
+    private String cidade;
+    private String uf;
+    private String teste;
+    
+    
+    //Pessoa p = new Pessoa();
+    /*public Pessoa getPessoa(){
+        Pessoa p = new Pessoa();
+        p.setNome(jTextField1.getText());
+        p.setSobrenome(jTextField2.getText());
+        p.setIdade(Integer.valueOf(jTextField3.getText()));
+        p.setCpf(Integer.valueOf(jTextField4.getText()));
+        p.setSexo(sexo);
+        p.setCidade(jTextField5.getText());
+        p.setUf(jTextField6.getText());
+        return p;
+    }
+    */
+    //Pessoa p = new Pessoa();
     public Cadastrar() {
+       
         initComponents();
+        
     }
 
     /**
@@ -51,8 +83,13 @@ public class Cadastrar extends javax.swing.JInternalFrame {
         jLabel5.setText("Sexo");
 
         jButton1.setText("Salvar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Cancelar");
+        jButton2.setText("testar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -61,15 +98,86 @@ public class Cadastrar extends javax.swing.JInternalFrame {
 
         jLabel6.setText("Cidade");
 
+        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField1FocusLost(evt);
+            }
+        });
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jTextField2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField2FocusLost(evt);
+            }
+        });
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+
+        jTextField3.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField3FocusLost(evt);
+            }
+        });
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
+        jTextField4.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField4FocusLost(evt);
+            }
+        });
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Masculino", "Feminino" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Nome");
+
+        jTextField5.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField5FocusLost(evt);
+            }
+        });
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Sobrenome");
 
         jLabel7.setText("UF");
 
         jLabel3.setText("Idade");
+
+        jTextField6.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField6FocusLost(evt);
+            }
+        });
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -87,9 +195,7 @@ public class Cadastrar extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel3)
                                 .addComponent(jLabel2)
                                 .addComponent(jLabel1))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7)))
+                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -168,8 +274,100 @@ public class Cadastrar extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        dispose();
+       /* String dados = "";
+        for(Pessoa p : lista) {
+            dados += p.getNome() + " - " + p.getSobrenome() + "\n";
+        }
+        JOptionPane.showMessageDialog(this, dados);*/
+        JOptionPane.showMessageDialog(null, nome+ sobrenome+ idade+cidade+sexo);
+        //dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jTextField1FocusLost
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+       // Integer codigo = Integer.parseInt(jTextField1.getText());
+        //String nome = jTextField2.getText();
+        
+        Pessoa p = new Pessoa(nome,sobrenome, idade, cpf, sexo,cidade,uf);
+        lista.add(p);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+        nome = jTextField1.getText();
+        
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+        sobrenome = jTextField1.getText();
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+       idade = Integer.parseInt(jTextField3.getText());
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField2FocusLost
+        // TODO add your handling code here:
+        sobrenome = jTextField1.getText();
+    }//GEN-LAST:event_jTextField2FocusLost
+
+    private void jTextField3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField3FocusLost
+        // TODO add your handling code here:
+        idade = Integer.parseInt(jTextField3.getText());
+    }//GEN-LAST:event_jTextField3FocusLost
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+        cpf = Integer.parseInt(jTextField3.getText());
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jTextField4FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField4FocusLost
+        // TODO add your handling code here:
+        cpf = Integer.parseInt(jTextField3.getText());
+    }//GEN-LAST:event_jTextField4FocusLost
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+        JComboBox x= (JComboBox)evt.getSource();
+        jComboBox1ActionPerformed(evt);
+        jComboBox1.getSelectedItem();
+        jComboBox1.getSelectedIndex();
+        teste=(String) x.getSelectedItem();
+        if(x.getSelectedItem().equals(Masculino)){
+          
+        } else{
+        sexo= "Feminino";
+        } 
+        
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+         cidade = jTextField5.getText();
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+         uf = jTextField6.getText();
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jTextField5FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField5FocusLost
+        // TODO add your handling code here:
+        cidade = jTextField5.getText();
+    }//GEN-LAST:event_jTextField5FocusLost
+
+    private void jTextField6FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField6FocusLost
+        // TODO add your handling code here:
+         uf = jTextField6.getText();
+    }//GEN-LAST:event_jTextField6FocusLost
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
