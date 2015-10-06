@@ -5,7 +5,7 @@
 public class Principal extends javax.swing.JFrame {
 
     private Pessoa objPessoa;
-    private Locacao objLocacao;
+    private Locar objLocacao;
     
     public Principal() {
         
@@ -13,7 +13,7 @@ public class Principal extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
         
         this.objPessoa = new Pessoa();
-        this.objLocacao = new Locacao();
+        this.objLocacao = new Locar();
     }
 
     @SuppressWarnings("unchecked")
@@ -148,6 +148,9 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenuItemLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemLocacaoActionPerformed
         objLocacao.setVisible(true); //OBS: TROCAR IMPLENTAÇÃO!
+        Locar locar = new Locar();
+        this.jDesktopPanePrincipal.add(locar);
+        locar.show();
     }//GEN-LAST:event_jMenuItemLocacaoActionPerformed
 
     private void jMenuCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastrarActionPerformed

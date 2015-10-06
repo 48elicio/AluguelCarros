@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Diego Pedro Marques
@@ -140,10 +143,16 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        if(jTextField1.getText().equals("admin") && new String(jPasswordField1.getPassword()).equals("admin")){
         new Principal().setVisible(true);
+        //Login.setDefaultCloseOperation(Longin.DISPOSE_ON_CLOSE);
+        //login.setDefaultCloseOperation(login.EXIT_ON_CLOSE);
+        //Login().setVisible(false);
+        dispose();
         Principal();
-        
+        }else{
+        JOptionPane.showMessageDialog(null, "Login incorreto", "erro", JOptionPane.ERROR_MESSAGE);
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
