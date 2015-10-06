@@ -1,3 +1,7 @@
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Diego Pedro Marques
@@ -11,6 +15,7 @@ public class Pessoa {
     private String sexo;
     private String cidade;
     private String uf;
+    private List<Pessoa> lista = new ArrayList<>();
 
     public Pessoa() {
     }
@@ -27,6 +32,9 @@ public class Pessoa {
         this.sexo = sexo;
         this.cidade = cidade;
         this.uf = uf;
+    }
+    public String toString(){
+    return this.nome;
     }
 
     public void setNome(String nome) {
@@ -80,6 +88,10 @@ public class Pessoa {
     public void setUf(String uf) {
         this.uf = uf;
     }
-    
-    
+    public void salvar(Pessoa p){
+    lista.add(p);
+    }
+    public List<Pessoa> getLista(){
+    return lista;
+    }
 }

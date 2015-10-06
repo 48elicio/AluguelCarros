@@ -89,7 +89,7 @@ public class Cadastrar extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton2.setText("testar");
+        jButton2.setText("Mostrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -299,7 +299,8 @@ public class Cadastrar extends javax.swing.JInternalFrame {
         //String nome = jTextField2.getText();
         
         //Pessoa p = new Pessoa(nome,sobrenome, idade, cpf, sexo,cidade,uf);
-        lista.add(p);  
+        lista.add(p);
+        p.salvar(p);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

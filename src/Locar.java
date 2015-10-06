@@ -1,3 +1,7 @@
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,6 +17,9 @@ public class Locar extends javax.swing.JInternalFrame {
     /**
      * Creates new form Locar
      */
+    
+    private List<Pessoa> teste = new ArrayList<>();
+    
     public Locar() {
         initComponents();
     }
@@ -42,6 +49,11 @@ public class Locar extends javax.swing.JInternalFrame {
         setMaximizable(true);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Cliente");
 
@@ -49,6 +61,7 @@ public class Locar extends javax.swing.JInternalFrame {
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lupa.png"))); // NOI18N
         jButton1.setText("Procurar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +152,7 @@ public class Locar extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         pack();
@@ -148,6 +161,23 @@ public class Locar extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+        teste = new Pessoa().getLista();
+        jComboBox2.removeAllItems();
+        //Pessoa p = new Pessoa();
+        //Pessoa p = new Pessoa();
+        //teste = p.getNome();
+        for(Pessoa p : teste) {
+           System.out.println(p);
+        }
+        //JOptionPane.showMessageDialog(null, teste);
+        for(int i =0 ; i< teste.size(); i++){
+        //jComboBox2.addItem(teste get(i).getNome());
+        jComboBox2.addItem(teste.get(i).getNome());
+        }
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
