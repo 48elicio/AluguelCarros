@@ -7,6 +7,8 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame {
 
+    private String usuario ;
+    WriteObjectToFile write = new WriteObjectToFile();
     public Login() {
         
         initComponents();
@@ -148,6 +150,10 @@ public class Login extends javax.swing.JFrame {
         //Login.setDefaultCloseOperation(Longin.DISPOSE_ON_CLOSE);
         //login.setDefaultCloseOperation(login.EXIT_ON_CLOSE);
         //Login().setVisible(false);
+        usuario = jTextField1.getText();
+        
+       // WriteObjectToFile.escrever(usuario);
+        write.escrever(usuario);
         dispose();
         Principal();
         }else{
@@ -157,7 +163,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:   
+        // TODO add your handling code here: 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
