@@ -1,3 +1,12 @@
+package aluguecarros.visao;
+
+
+import aluguecarros.visao.FrotaVeiculos;
+import aluguecarros.visao.Cadastrar;
+import aluguecarros.visao.Locar;
+import aluguecarros.visao.Devolucao;
+import aluguecarros.modelo.Pessoa;
+
 /**
  *
  * @author Diego Pedro Marques
@@ -205,7 +214,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuMovimentacao;
     // End of variables declaration//GEN-END:variables
 
-    Pessoa getPessoa() {
+    public Pessoa getPessoa() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }

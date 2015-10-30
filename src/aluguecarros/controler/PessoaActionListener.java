@@ -1,7 +1,11 @@
+package aluguecarros.controler;
+
 /**
  *
  * @author Diego Pedro Marques
  */
+import aluguecarros.visao.Principal;
+import aluguecarros.modelo.Pessoa;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;

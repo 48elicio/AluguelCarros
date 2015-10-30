@@ -1,3 +1,5 @@
+package aluguecarros.visao;
+
 /**
  *
  * @author Diego Pedro Marques
