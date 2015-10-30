@@ -18,7 +18,7 @@ import java.io.ObjectOutputStream;
 public class WriteObjectToFile {
         public static void escrever(String usuario) {
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("\\C:\\Users\\comp1\\Desktop\\teste\\jghjhjhj.txt");
+            FileOutputStream fileOutputStream = new FileOutputStream("user.txt");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(usuario);
             objectOutputStream.flush();
@@ -28,20 +28,4 @@ public class WriteObjectToFile {
             e.printStackTrace();
         }
     }
-    public static void ler() {
-        String usu;
-        try {
-            FileInputStream leitorArquivos = new FileInputStream("\\C:\\Users\\comp1\\Desktop\\teste\\jghjhjhj.txt");
-            ObjectInputStream objectInputStream = new ObjectInputStream(leitorArquivos);
-            
-            usu = (String) objectInputStream.readObject();
-            
-            leitorArquivos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        
-       // return usu;
-    }
-    
 }

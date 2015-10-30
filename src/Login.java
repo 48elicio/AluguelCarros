@@ -7,12 +7,14 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame {
 
-    private String usuario ;
+    private String usuario = null ;
+    ReaderObjectToFile read = new ReaderObjectToFile();
     WriteObjectToFile write = new WriteObjectToFile();
     public Login() {
-        
+        usuario=ReaderObjectToFile.ler();
         initComponents();
   
+     jTextField1.setText(String.valueOf(usuario));
     }
 
     @SuppressWarnings("unchecked")
@@ -56,6 +58,11 @@ public class Login extends javax.swing.JFrame {
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
+            }
+        });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField1KeyPressed(evt);
             }
         });
 
@@ -105,6 +112,11 @@ public class Login extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton1KeyPressed(evt);
+            }
+        });
 
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -145,7 +157,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(jTextField1.getText().equals("admin") && new String(jPasswordField1.getPassword()).equals("admin")){
+        if(new String(jPasswordField1.getPassword()).equals("admin")){
         new Principal().setVisible(true);
         //Login.setDefaultCloseOperation(Longin.DISPOSE_ON_CLOSE);
         //login.setDefaultCloseOperation(login.EXIT_ON_CLOSE);
@@ -163,7 +175,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here: 
+        // TODO add your handling code here:
+           jTextField1.setText(String.valueOf(usuario));
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
@@ -181,6 +194,29 @@ public class Login extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1KeyPressed
+
+    private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
+        // TODO add your handling code here:
+        if(new String(jPasswordField1.getPassword()).equals("admin")){
+        new Principal().setVisible(true);
+        //Login.setDefaultCloseOperation(Longin.DISPOSE_ON_CLOSE);
+        //login.setDefaultCloseOperation(login.EXIT_ON_CLOSE);
+        //Login().setVisible(false);
+        usuario = jTextField1.getText();
+        
+       // WriteObjectToFile.escrever(usuario);
+        write.escrever(usuario);
+        dispose();
+        Principal();
+        }else{
+        JOptionPane.showMessageDialog(null, "Login incorreto", "erro", JOptionPane.ERROR_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_jButton1KeyPressed
 
     /**
      * @param args the command line arguments
