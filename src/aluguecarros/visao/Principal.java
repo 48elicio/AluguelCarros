@@ -1,6 +1,5 @@
 package aluguecarros.visao;
 
-
 import aluguecarros.visao.FrotaVeiculos;
 import aluguecarros.visao.Cadastrar;
 import aluguecarros.visao.Locar;
@@ -15,12 +14,17 @@ public class Principal extends javax.swing.JFrame {
 
     private Pessoa objPessoa;
     private Locar objLocacao;
-    
+    Reserva reserva = new Reserva();
+    Cadastrar cadastrar = new Cadastrar();
+    FrotaVeiculos frota = new FrotaVeiculos();
+    Devolucao devolucao = new Devolucao();
+    Locar locar = new Locar();
+
     public Principal() {
-        
+
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
-        
+
         this.objPessoa = new Pessoa();
         this.objLocacao = new Locar();
     }
@@ -130,36 +134,56 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReservaActionPerformed
-        Reserva reserva = new Reserva();
-        this.jDesktopPanePrincipal.add(reserva);
-        reserva.show();
+        reserva.dispose();
+        if (reserva != null) {
+            this.jDesktopPanePrincipal.removeAll();
+
+            this.jDesktopPanePrincipal.add(reserva);
+            reserva.show();
+
+        }
+
     }//GEN-LAST:event_jMenuItemReservaActionPerformed
 
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
         //jInternalFrameCliente.setVisible(true);
-        Cadastrar cadastrar = new Cadastrar();
-        this.jDesktopPanePrincipal.add(cadastrar);
-        cadastrar.show();
+        cadastrar.dispose();
+        if (cadastrar != null) {
+
+            this.jDesktopPanePrincipal.removeAll();
+            this.jDesktopPanePrincipal.add(cadastrar);
+            cadastrar.show();
+        }
     }//GEN-LAST:event_jMenuItemClienteActionPerformed
 
     private void jMenuItemFrotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFrotaActionPerformed
-        FrotaVeiculos frota = new FrotaVeiculos();
-        this.jDesktopPanePrincipal.add(frota);
-        frota.show();
+
+        frota.dispose();
+        if (frota != null) {
+            this.jDesktopPanePrincipal.removeAll();
+            this.jDesktopPanePrincipal.add(frota);
+            frota.show();
+        }
     }//GEN-LAST:event_jMenuItemFrotaActionPerformed
 
     private void jMenuItemDevolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDevolucaoActionPerformed
-        Devolucao devolucao = new Devolucao();
-        this.jDesktopPanePrincipal.add(devolucao);
-        devolucao.show();
-        
+        devolucao.dispose();
+        if (devolucao != null) {
+            this.jDesktopPanePrincipal.removeAll();
+
+            this.jDesktopPanePrincipal.add(devolucao);
+            devolucao.show();
+        }
     }//GEN-LAST:event_jMenuItemDevolucaoActionPerformed
 
     private void jMenuItemLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemLocacaoActionPerformed
         objLocacao.setVisible(true); //OBS: TROCAR IMPLENTAÇÃO!
-        Locar locar = new Locar();
-        this.jDesktopPanePrincipal.add(locar);
-        locar.show();
+        frota.dispose();
+        if (frota != null) {
+            this.jDesktopPanePrincipal.removeAll();
+            this.jDesktopPanePrincipal.add(locar);
+            locar.show();
+        }
     }//GEN-LAST:event_jMenuItemLocacaoActionPerformed
 
     private void jMenuCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastrarActionPerformed

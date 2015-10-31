@@ -131,6 +131,7 @@ public class Reserva extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+
         dispose();
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
