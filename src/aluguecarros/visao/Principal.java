@@ -1,9 +1,5 @@
 package aluguecarros.visao;
 
-import aluguecarros.visao.FrotaVeiculos;
-import aluguecarros.visao.Cadastrar;
-import aluguecarros.visao.Locar;
-import aluguecarros.visao.Devolucao;
 import aluguecarros.modelo.Pessoa;
 
 /**

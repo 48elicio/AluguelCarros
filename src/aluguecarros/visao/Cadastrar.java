@@ -6,7 +6,6 @@ import aluguecarros.modelo.Pessoa;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,8 +13,9 @@ import javax.swing.JOptionPane;
  */
 public class Cadastrar extends javax.swing.JInternalFrame {
 
-     private PessoaActionListener listener;
+    private PessoaActionListener listener;
     private List<Pessoa> lista = new ArrayList<>();
+    
     private String nome;
     private String sobrenome;
     private Integer idade;
@@ -93,7 +93,7 @@ public class Cadastrar extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton2.setText("Mostrar");
+        jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -283,13 +283,7 @@ public class Cadastrar extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       /* String dados = "";
-        for(Pessoa p : lista) {
-            dados += p.getNome() + " - " + p.getSobrenome() + "\n";
-        }
-        JOptionPane.showMessageDialog(this, dados);*/
-        JOptionPane.showMessageDialog(null, nome+ sobrenome+ idade+cidade+sexo);
-        //dispose();
+       dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
