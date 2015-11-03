@@ -12,8 +12,7 @@ import aluguecarros.modelo.Pessoa;
  */
 public class Principal extends javax.swing.JFrame {
 
-    private Pessoa objPessoa;
-    private Locar objLocacao;
+    
     Reserva reserva = new Reserva();
     Cadastrar cadastrar = new Cadastrar();
     FrotaVeiculos frota = new FrotaVeiculos();
@@ -24,9 +23,6 @@ public class Principal extends javax.swing.JFrame {
 
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
-
-        this.objPessoa = new Pessoa();
-        this.objLocacao = new Locar();
     }
 
     @SuppressWarnings("unchecked")
@@ -177,7 +173,6 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemDevolucaoActionPerformed
 
     private void jMenuItemLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemLocacaoActionPerformed
-        objLocacao.setVisible(true); //OBS: TROCAR IMPLENTAÇÃO!
         frota.dispose();
         if (frota != null) {
             this.jDesktopPanePrincipal.removeAll();
