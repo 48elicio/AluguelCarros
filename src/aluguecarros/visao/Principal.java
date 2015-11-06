@@ -19,6 +19,7 @@ public class Principal extends javax.swing.JFrame {
 
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -126,10 +127,10 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReservaActionPerformed
-        reserva.dispose();
+        
+        cadastrar.dispose();
         if (reserva != null) {
             this.jDesktopPanePrincipal.removeAll();
-
             this.jDesktopPanePrincipal.add(reserva);
             reserva.show();
 
@@ -138,10 +139,9 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemReservaActionPerformed
 
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
-        //jInternalFrameCliente.setVisible(true);
+        
         cadastrar.dispose();
         if (cadastrar != null) {
-
             this.jDesktopPanePrincipal.removeAll();
             this.jDesktopPanePrincipal.add(cadastrar);
             cadastrar.show();
@@ -162,7 +162,6 @@ public class Principal extends javax.swing.JFrame {
         devolucao.dispose();
         if (devolucao != null) {
             this.jDesktopPanePrincipal.removeAll();
-
             this.jDesktopPanePrincipal.add(devolucao);
             devolucao.show();
         }
@@ -176,7 +175,7 @@ public class Principal extends javax.swing.JFrame {
             locar.show();
         }
     }//GEN-LAST:event_jMenuItemLocacaoActionPerformed
-
+    
     private void jMenuCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastrarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuCadastrarActionPerformed
