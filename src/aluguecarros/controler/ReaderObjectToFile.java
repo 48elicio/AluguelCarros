@@ -9,20 +9,19 @@ import java.io.ObjectInputStream;
  */
 public class ReaderObjectToFile {
     
+     public static String ler() {
+            String usu = null;
+            try {
+                FileInputStream leitorArquivos = new FileInputStream("Usuario.txt");
+                ObjectInputStream objectInputStream = new ObjectInputStream(leitorArquivos);
 
-public static String ler() {
-        String usu = null;
-        try {
-            FileInputStream leitorArquivos = new FileInputStream("Usuario.txt");
-            ObjectInputStream objectInputStream = new ObjectInputStream(leitorArquivos);
-            
-            usu = (String) objectInputStream.readObject();
-            
-            leitorArquivos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        
-       return usu;
-}
+                usu = (String) objectInputStream.readObject();
+
+                leitorArquivos.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+           return usu;
+    }
 }

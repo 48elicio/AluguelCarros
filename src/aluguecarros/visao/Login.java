@@ -18,7 +18,7 @@ public class Login extends javax.swing.JFrame {
         usuario=ReaderObjectToFile.ler();
         initComponents();
   
-     jTextField1.setText(String.valueOf(usuario));
+        jTextField1.setText(String.valueOf(usuario));
     }
 
     @SuppressWarnings("unchecked")

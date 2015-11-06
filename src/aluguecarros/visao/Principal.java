@@ -1,19 +1,19 @@
 package aluguecarros.visao;
 
+
+import aluguecarros.controler.WriterLog;
 import aluguecarros.modelo.Pessoa;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Diego Pedro Marques
  */
 public class Principal extends javax.swing.JFrame {
-
-    
-    Reserva reserva = new Reserva();
-    Cadastrar cadastrar = new Cadastrar();
-    FrotaVeiculos frota = new FrotaVeiculos();
-    Devolucao devolucao = new Devolucao();
-    Locar locar = new Locar();
+   
+    WriterLog writer = new WriterLog();
 
     public Principal() {
 
@@ -128,51 +128,95 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenuItemReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReservaActionPerformed
         
-        cadastrar.dispose();
+        /*cadastrar.dispose();
         if (reserva != null) {
             this.jDesktopPanePrincipal.removeAll();
             this.jDesktopPanePrincipal.add(reserva);
-            reserva.show();
+            reserva.setVisible(true);
 
+        }*/
+        Reserva reserva = new Reserva();
+        reserva.setVisible(true);
+        jDesktopPanePrincipal.add(reserva);
+        try {
+            WriterLog.escrever("Foi aberto a janela RESERVA!");
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+       
     }//GEN-LAST:event_jMenuItemReservaActionPerformed
 
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
         
-        cadastrar.dispose();
+        /*cadastrar.dispose();
         if (cadastrar != null) {
             this.jDesktopPanePrincipal.removeAll();
             this.jDesktopPanePrincipal.add(cadastrar);
-            cadastrar.show();
+            cadastrar.setVisible(true);
+        }*/
+        Cadastrar cadastrar = new Cadastrar();
+        cadastrar.setVisible(true);
+        jDesktopPanePrincipal.add(cadastrar);
+        try {
+            WriterLog.escrever("Foi aberto a janela CADASTRAR!");
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }//GEN-LAST:event_jMenuItemClienteActionPerformed
 
     private void jMenuItemFrotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFrotaActionPerformed
 
-        frota.dispose();
+        /*frota.dispose();
         if (frota != null) {
             this.jDesktopPanePrincipal.removeAll();
             this.jDesktopPanePrincipal.add(frota);
-            frota.show();
+            frota.setVisible(true);
+        }*/
+        FrotaVeiculos frota = new FrotaVeiculos();
+        frota.setVisible(true);
+        jDesktopPanePrincipal.add(frota);
+        try {
+            WriterLog.escrever("Foi aberto a janela FROTA!");
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jMenuItemFrotaActionPerformed
 
     private void jMenuItemDevolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDevolucaoActionPerformed
-        devolucao.dispose();
+        
+        /*devolucao.dispose();
         if (devolucao != null) {
             this.jDesktopPanePrincipal.removeAll();
             this.jDesktopPanePrincipal.add(devolucao);
-            devolucao.show();
+            devolucao.setVisible(true);
+        }*/
+        Devolucao devolucao = new Devolucao();
+        devolucao.setVisible(true);
+        jDesktopPanePrincipal.add(devolucao);
+        try {
+            WriterLog.escrever("Foi aberto a janela DEVOLUCAO!");
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }//GEN-LAST:event_jMenuItemDevolucaoActionPerformed
 
     private void jMenuItemLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemLocacaoActionPerformed
-        frota.dispose();
+        
+        /*frota.dispose();
         if (frota != null) {
             this.jDesktopPanePrincipal.removeAll();
             this.jDesktopPanePrincipal.add(locar);
-            locar.show();
+            locar.setVisible(true);
+        }*/
+        Locar locar = new Locar();
+        locar.setVisible(true);
+        jDesktopPanePrincipal.add(locar);
+        try {
+            WriterLog.escrever("Foi aberto a janela LOCAR!");
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jMenuItemLocacaoActionPerformed
     
