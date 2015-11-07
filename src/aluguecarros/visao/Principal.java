@@ -127,17 +127,12 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReservaActionPerformed
-        
-        /*cadastrar.dispose();
-        if (reserva != null) {
-            this.jDesktopPanePrincipal.removeAll();
+        Reserva reserva = new Reserva();
+        reserva.dispose();
+        if (reserva != null) {  
             this.jDesktopPanePrincipal.add(reserva);
             reserva.setVisible(true);
-
-        }*/
-        Reserva reserva = new Reserva();
-        reserva.setVisible(true);
-        jDesktopPanePrincipal.add(reserva);
+        }
         try {
             WriterLog.escrever("Foi aberto a janela RESERVA!");
         } catch (IOException ex) {
@@ -148,15 +143,12 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
         
-        /*cadastrar.dispose();
-        if (cadastrar != null) {
-            this.jDesktopPanePrincipal.removeAll();
+        Cadastrar cadastrar = new Cadastrar();
+        
+        if (cadastrar != null) { 
             this.jDesktopPanePrincipal.add(cadastrar);
             cadastrar.setVisible(true);
-        }*/
-        Cadastrar cadastrar = new Cadastrar();
-        cadastrar.setVisible(true);
-        jDesktopPanePrincipal.add(cadastrar);
+        }
         try {
             WriterLog.escrever("Foi aberto a janela CADASTRAR!");
         } catch (IOException ex) {
@@ -166,16 +158,12 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemClienteActionPerformed
 
     private void jMenuItemFrotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFrotaActionPerformed
-
-        /*frota.dispose();
+        FrotaVeiculos frota = new FrotaVeiculos();
+        frota.dispose();
         if (frota != null) {
-            this.jDesktopPanePrincipal.removeAll();
             this.jDesktopPanePrincipal.add(frota);
             frota.setVisible(true);
-        }*/
-        FrotaVeiculos frota = new FrotaVeiculos();
-        frota.setVisible(true);
-        jDesktopPanePrincipal.add(frota);
+        }
         try {
             WriterLog.escrever("Foi aberto a janela FROTA!");
         } catch (IOException ex) {
@@ -184,16 +172,12 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemFrotaActionPerformed
 
     private void jMenuItemDevolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDevolucaoActionPerformed
-        
-        /*devolucao.dispose();
+        Devolucao devolucao = new Devolucao();
+        devolucao.dispose();
         if (devolucao != null) {
-            this.jDesktopPanePrincipal.removeAll();
             this.jDesktopPanePrincipal.add(devolucao);
             devolucao.setVisible(true);
-        }*/
-        Devolucao devolucao = new Devolucao();
-        devolucao.setVisible(true);
-        jDesktopPanePrincipal.add(devolucao);
+        }
         try {
             WriterLog.escrever("Foi aberto a janela DEVOLUCAO!");
         } catch (IOException ex) {
@@ -203,16 +187,12 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemDevolucaoActionPerformed
 
     private void jMenuItemLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemLocacaoActionPerformed
-        
-        /*frota.dispose();
-        if (frota != null) {
-            this.jDesktopPanePrincipal.removeAll();
+        Locar locar = new Locar();
+        locar.dispose();
+        if (locar != null) {
             this.jDesktopPanePrincipal.add(locar);
             locar.setVisible(true);
-        }*/
-        Locar locar = new Locar();
-        locar.setVisible(true);
-        jDesktopPanePrincipal.add(locar);
+        }
         try {
             WriterLog.escrever("Foi aberto a janela LOCAR!");
         } catch (IOException ex) {
