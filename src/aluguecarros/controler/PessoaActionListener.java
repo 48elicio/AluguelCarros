@@ -14,7 +14,7 @@ public class PessoaActionListener
                 implements ActionListener{
     
     private Principal frame;
-    
+    //private PessoaDao dao = new PessoaDao();
     public PessoaActionListener(Principal frame){
         this.frame = frame;
     }
@@ -23,7 +23,9 @@ public class PessoaActionListener
     public void actionPerformed(ActionEvent e) {
         if("salvar".equals(e.getActionCommand())) {
             Pessoa p = frame.getPessoa();
-            
+            /*try{
+                dao.salvar(p);
+            } catch*/
         } else if("listar".equals(e.getActionCommand())) {
             JOptionPane.showMessageDialog(frame, "Clicou no listar Listar");
         }
