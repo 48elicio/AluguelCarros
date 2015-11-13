@@ -16,11 +16,8 @@ public class PessoaActionListener
     private Cadastrar cadastrar;
 
     public PessoaActionListener(Cadastrar a) {
-       
-    
+        this.cadastrar = a;
     }
-    
- 
     
     @Override
     public void actionPerformed(ActionEvent e) {
