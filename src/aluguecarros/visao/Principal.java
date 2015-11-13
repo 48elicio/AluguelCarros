@@ -128,11 +128,9 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenuItemReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReservaActionPerformed
         Reserva reserva = new Reserva();
-        reserva.dispose();
-        if (reserva != null) {  
-            this.jDesktopPanePrincipal.add(reserva);
-            reserva.setVisible(true);
-        }
+        jDesktopPanePrincipal.add(reserva);
+        reserva.setVisible(true);
+        
         try {
             WriterLog.escrever("Foi aberto a janela RESERVA!");
         } catch (IOException ex) {
@@ -148,6 +146,8 @@ public class Principal extends javax.swing.JFrame {
         if (cadastrar != null) { 
             this.jDesktopPanePrincipal.add(cadastrar);
             cadastrar.setVisible(true);
+        }else{
+            cadastrar.toFront();
         }
         try {
             WriterLog.escrever("Foi aberto a janela CADASTRAR!");

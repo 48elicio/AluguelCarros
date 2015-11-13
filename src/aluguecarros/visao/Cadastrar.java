@@ -76,8 +76,6 @@ public class Cadastrar extends javax.swing.JInternalFrame {
         jTextField6 = new javax.swing.JTextField();
 
         setClosable(true);
-        setIconifiable(true);
-        setMaximizable(true);
 
         jLabel4.setText("CPF");
 
