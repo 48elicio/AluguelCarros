@@ -4,8 +4,8 @@ package aluguecarros.controler;
  *
  * @author Diego Pedro Marques
  */
-import aluguecarros.visao.Principal;
 import aluguecarros.modelo.Pessoa;
+import aluguecarros.visao.Cadastrar;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -13,19 +13,24 @@ import javax.swing.JOptionPane;
 public class PessoaActionListener 
                 implements ActionListener{
     
-    private Principal frame;
+    private Cadastrar cadastrar;
+
+    public PessoaActionListener(Cadastrar a) {
+       
     
-    public PessoaActionListener(Principal frame){
-        this.frame = frame;
     }
+    
+ 
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        if("salvar".equals(e.getActionCommand())) {
-            Pessoa p = frame.getPessoa();
-            
-        } else if("listar".equals(e.getActionCommand())) {
-            JOptionPane.showMessageDialog(frame, "Clicou no listar Listar");
+         if("salvar".equals(e.getActionCommand())) {
+            Pessoa p = cadastrar.getPessoa();
+            p.salvar(p);
+           // jButton1.addActionListener(listener);
+//jButton1.setActionCommand("Cancelar");
+        } else if("Cancelar".equals(e.getActionCommand())) {
+            JOptionPane.showMessageDialog(cadastrar, "Clicou no cancelar");
         }
         
     }

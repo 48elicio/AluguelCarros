@@ -128,8 +128,11 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenuItemReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReservaActionPerformed
         Reserva reserva = new Reserva();
-        jDesktopPanePrincipal.add(reserva);
+        
+        if (reserva != null){
+        this.jDesktopPanePrincipal.add(reserva);
         reserva.setVisible(true);
+        }
         
         try {
             WriterLog.escrever("Foi aberto a janela RESERVA!");
