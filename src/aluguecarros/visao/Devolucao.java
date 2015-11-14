@@ -1,5 +1,7 @@
 package aluguecarros.visao;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author Diego Pedro Marques
@@ -153,4 +155,8 @@ public class Devolucao extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextFieldDevolucaoCliente;
     // End of variables declaration//GEN-END:variables
+    
+    public void setPosicao() {  
+    Dimension d = this.getDesktopPane().getSize();  
+    this.setLocation((d.width - this.getSize().width) / 2, (d.height - this.getSize().height) / 2); }
 }

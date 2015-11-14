@@ -3,6 +3,7 @@ package aluguecarros.visao;
 
 import aluguecarros.controler.PessoaActionListener;
 import aluguecarros.modelo.Pessoa;
+import java.awt.Dimension;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +48,7 @@ public class Cadastrar extends javax.swing.JInternalFrame {
         initComponents();
         
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -409,4 +411,8 @@ public class Cadastrar extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
+
+    public void setPosicao() {  
+    Dimension d = this.getDesktopPane().getSize();  
+    this.setLocation((d.width - this.getSize().width) / 2, (d.height - this.getSize().height) / 2); }
 }

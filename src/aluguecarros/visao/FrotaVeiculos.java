@@ -1,5 +1,7 @@
 package aluguecarros.visao;
 
+import java.awt.Dimension;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -156,4 +158,8 @@ public class FrotaVeiculos extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
+    
+    public void setPosicao() {  
+    Dimension d = this.getDesktopPane().getSize();  
+    this.setLocation((d.width - this.getSize().width) / 2, (d.height - this.getSize().height) / 2); }
 }

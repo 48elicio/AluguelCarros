@@ -1,5 +1,7 @@
 package aluguecarros.visao;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author Diego Pedro Marques
@@ -146,4 +148,8 @@ public class Reserva extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextFieldReservaCliente;
     // End of variables declaration//GEN-END:variables
+
+    public void setPosicao() {  
+    Dimension d = this.getDesktopPane().getSize();  
+    this.setLocation((d.width - this.getSize().width) / 2, (d.height - this.getSize().height) / 2); }
 }

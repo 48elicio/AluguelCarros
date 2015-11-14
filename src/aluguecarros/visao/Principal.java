@@ -11,6 +11,7 @@ import java.util.logging.Logger;
  *
  * @author Diego Pedro Marques
  */
+
 public class Principal extends javax.swing.JFrame {
    
     WriterLog writer = new WriterLog();
@@ -139,6 +140,7 @@ public class Principal extends javax.swing.JFrame {
             jDesktopPanePrincipal.add(reserva);
         }
         reserva.setVisible(true);
+        reserva.setPosicao();
         
         try {
             WriterLog.escrever("Foi aberto a janela RESERVA!");
@@ -153,8 +155,9 @@ public class Principal extends javax.swing.JFrame {
         if (cadastrar == null) {
             cadastrar = new Cadastrar();
             jDesktopPanePrincipal.add(cadastrar);
-        }
+        } 
         cadastrar.setVisible(true);
+        cadastrar.setPosicao();
         
         try {
             WriterLog.escrever("Foi aberto a janela CADASTRAR!");
@@ -171,6 +174,7 @@ public class Principal extends javax.swing.JFrame {
             jDesktopPanePrincipal.add(frota);
         }
         frota.setVisible(true);
+        frota.setPosicao();
         
         try {
             WriterLog.escrever("Foi aberto a janela FROTA!");
@@ -186,6 +190,7 @@ public class Principal extends javax.swing.JFrame {
             jDesktopPanePrincipal.add(devolucao);
         }
         devolucao.setVisible(true);
+        devolucao.setPosicao();
         
         try {
             WriterLog.escrever("Foi aberto a janela DEVOLUCAO!");
@@ -202,6 +207,7 @@ public class Principal extends javax.swing.JFrame {
             jDesktopPanePrincipal.add(locar);
         }
         locar.setVisible(true);
+        locar.setPosicao();
         
         try {
             WriterLog.escrever("Foi aberto a janela LOCAR!");

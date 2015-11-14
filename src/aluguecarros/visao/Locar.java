@@ -2,6 +2,7 @@ package aluguecarros.visao;
 
 
 import aluguecarros.modelo.Pessoa;
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -198,4 +199,8 @@ public class Locar extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    public void setPosicao() {  
+    Dimension d = this.getDesktopPane().getSize();  
+    this.setLocation((d.width - this.getSize().width) / 2, (d.height - this.getSize().height) / 2); }
 }
