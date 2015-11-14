@@ -14,9 +14,15 @@ import java.util.logging.Logger;
 public class Principal extends javax.swing.JFrame {
    
     WriterLog writer = new WriterLog();
-
+    
+    static Cadastrar cadastrar = null;
+    static Reserva reserva = null;
+    static FrotaVeiculos frota = null;
+    static Devolucao devolucao = null;
+    static Locar locar = null;
+    
     public Principal() {
-
+        
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         
@@ -127,12 +133,12 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReservaActionPerformed
-        Reserva reserva = new Reserva();
         
-        if (reserva != null){
-        this.jDesktopPanePrincipal.add(reserva);
-        reserva.setVisible(true);
+        if (reserva == null) {
+            reserva = new Reserva();
+            jDesktopPanePrincipal.add(reserva);
         }
+        reserva.setVisible(true);
         
         try {
             WriterLog.escrever("Foi aberto a janela RESERVA!");
@@ -144,14 +150,12 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
         
-        Cadastrar cadastrar = new Cadastrar();
-        
-        if (cadastrar != null) { 
-            this.jDesktopPanePrincipal.add(cadastrar);
-            cadastrar.setVisible(true);
-        }else{
-            cadastrar.toFront();
+        if (cadastrar == null) {
+            cadastrar = new Cadastrar();
+            jDesktopPanePrincipal.add(cadastrar);
         }
+        cadastrar.setVisible(true);
+        
         try {
             WriterLog.escrever("Foi aberto a janela CADASTRAR!");
         } catch (IOException ex) {
@@ -161,12 +165,13 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemClienteActionPerformed
 
     private void jMenuItemFrotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFrotaActionPerformed
-        FrotaVeiculos frota = new FrotaVeiculos();
-        frota.dispose();
-        if (frota != null) {
-            this.jDesktopPanePrincipal.add(frota);
-            frota.setVisible(true);
+        
+        if (frota == null) {
+            frota = new FrotaVeiculos();
+            jDesktopPanePrincipal.add(frota);
         }
+        frota.setVisible(true);
+        
         try {
             WriterLog.escrever("Foi aberto a janela FROTA!");
         } catch (IOException ex) {
@@ -175,12 +180,13 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemFrotaActionPerformed
 
     private void jMenuItemDevolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDevolucaoActionPerformed
-        Devolucao devolucao = new Devolucao();
-        devolucao.dispose();
-        if (devolucao != null) {
-            this.jDesktopPanePrincipal.add(devolucao);
-            devolucao.setVisible(true);
+        
+        if (devolucao == null) {
+            devolucao = new Devolucao();
+            jDesktopPanePrincipal.add(devolucao);
         }
+        devolucao.setVisible(true);
+        
         try {
             WriterLog.escrever("Foi aberto a janela DEVOLUCAO!");
         } catch (IOException ex) {
@@ -190,12 +196,13 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemDevolucaoActionPerformed
 
     private void jMenuItemLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemLocacaoActionPerformed
-        Locar locar = new Locar();
-        locar.dispose();
-        if (locar != null) {
-            this.jDesktopPanePrincipal.add(locar);
-            locar.setVisible(true);
+        
+        if (locar == null) {
+            locar = new Locar();
+            jDesktopPanePrincipal.add(locar);
         }
+        locar.setVisible(true);
+        
         try {
             WriterLog.escrever("Foi aberto a janela LOCAR!");
         } catch (IOException ex) {
