@@ -1,6 +1,7 @@
 package aluguecarros.visao;
 
 
+import aluguecarros.controler.PrincipalListener;
 import aluguecarros.controler.WriterLog;
 import aluguecarros.modelo.Pessoa;
 import java.io.IOException;
@@ -15,7 +16,7 @@ import java.util.logging.Logger;
 public class Principal extends javax.swing.JFrame {
    
     WriterLog writer = new WriterLog();
-    
+    private PrincipalListener listener;
     public Cadastrar cadastrar = null;
     public Reserva reserva = null;
     static FrotaVeiculos frota = null;
@@ -73,6 +74,8 @@ public class Principal extends javax.swing.JFrame {
                 jMenuItemClienteActionPerformed(evt);
             }
         });
+        jMenuItemCliente.addActionListener(listener);
+        jMenuItemCliente.setActionCommand("Cliente");
         jMenuCadastrar.add(jMenuItemCliente);
 
         jMenuBarPrincipal.add(jMenuCadastrar);
@@ -152,13 +155,13 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
         
-        if (cadastrar == null) {
+        /*if (cadastrar == null) {
             cadastrar = new Cadastrar();
             jDesktopPanePrincipal.add(cadastrar);
         } 
         cadastrar.setVisible(true);
         cadastrar.setPosicao();
-        
+        */
         try {
             WriterLog.escrever("Foi aberto a janela CADASTRAR!");
         } catch (IOException ex) {
@@ -256,7 +259,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPanePrincipal;
+    public javax.swing.JDesktopPane jDesktopPanePrincipal;
     private javax.swing.JMenuBar jMenuBarPrincipal;
     private javax.swing.JMenu jMenuCadastrar;
     private javax.swing.JMenuItem jMenuItemCliente;
