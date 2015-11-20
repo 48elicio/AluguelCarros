@@ -208,39 +208,59 @@ Foi aberto a janela FROTA!
 Sat Nov 14 18:32:18 BRST 2015
 Foi aberto a janela DEVOLUCAO!
 
-Fri Nov 20 19:22:34 BRST 2015
-Foi aberto a janela CADASTRAR!
+Sat Nov 14 18:36:50 BRST 2015
+Foi aberto a janela DEVOLUCAO!
 
-Fri Nov 20 20:42:41 BRST 2015
-Foi aberto a janela CADASTRAR!
-
-Fri Nov 20 20:43:56 BRST 2015
-Foi aberto a janela CADASTRAR!
-
-Fri Nov 20 21:03:51 BRST 2015
+Sat Nov 14 18:36:52 BRST 2015
 Foi aberto a janela RESERVA!
 
-Fri Nov 20 21:43:03 BRST 2015
+Sat Nov 14 18:36:54 BRST 2015
+Foi aberto a janela LOCAR!
+
+Sat Nov 14 19:18:03 BRST 2015
 Foi aberto a janela CADASTRAR!
 
-Fri Nov 20 21:43:20 BRST 2015
+Sat Nov 14 19:18:11 BRST 2015
+Foi aberto a janela FROTA!
+
+Sat Nov 14 19:18:58 BRST 2015
 Foi aberto a janela CADASTRAR!
 
-Fri Nov 20 21:46:32 BRST 2015
+Sat Nov 14 19:23:38 BRST 2015
+Foi aberto a janela LOCAR!
+
+Sat Nov 14 19:23:41 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Sat Nov 14 19:23:43 BRST 2015
+Foi aberto a janela FROTA!
+
+Fri Nov 20 14:39:29 BRST 2015
 Foi aberto a janela CADASTRAR!
 
-Fri Nov 20 21:46:34 BRST 2015
+Fri Nov 20 14:39:33 BRST 2015
+Foi aberto a janela LOCAR!
+
+Fri Nov 20 14:39:35 BRST 2015
+Foi aberto a janela RESERVA!
+
+Fri Nov 20 14:39:37 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Fri Nov 20 14:39:41 BRST 2015
+Foi aberto a janela FROTA!
+
+Fri Nov 20 14:56:23 BRST 2015
 Foi aberto a janela CADASTRAR!
 
-Fri Nov 20 21:47:55 BRST 2015
-Foi aberto a janela CADASTRAR!
+Fri Nov 20 14:57:02 BRST 2015
+Foi aberto a janela LOCAR!
 
-Fri Nov 20 21:51:14 BRST 2015
-Foi aberto a janela CADASTRAR!
+Fri Nov 20 14:57:05 BRST 2015
+Foi aberto a janela RESERVA!
 
-Fri Nov 20 21:55:49 BRST 2015
-Foi aberto a janela CADASTRAR!
+Fri Nov 20 14:57:23 BRST 2015
+Foi aberto a janela DEVOLUCAO!
 
-Fri Nov 20 21:55:50 BRST 2015
-Foi aberto a janela CADASTRAR!
-
+Fri Nov 20 14:57:26 BRST 2015
+Foi aberto a janela FROTA!
