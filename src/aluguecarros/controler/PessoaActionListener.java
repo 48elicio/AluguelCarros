@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 public class PessoaActionListener 
                 implements ActionListener{
-    
+ 
     private Cadastrar cadastrar;
 
     public PessoaActionListener(Cadastrar a) {
@@ -28,6 +28,7 @@ public class PessoaActionListener
 //jButton1.setActionCommand("Cancelar");
         } else if("Cancelar".equals(e.getActionCommand())) {
             JOptionPane.showMessageDialog(cadastrar, "Clicou no cancelar");
+            cadastrar.dispose();
         }
         
     }

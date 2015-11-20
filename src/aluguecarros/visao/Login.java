@@ -3,6 +3,7 @@ package aluguecarros.visao;
 
 import aluguecarros.controler.ReaderObjectToFile;
 import aluguecarros.controler.WriteObjectToFile;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -78,6 +79,11 @@ public class Login extends javax.swing.JFrame {
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
+            }
+        });
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyPressed(evt);
             }
         });
 
@@ -204,8 +210,13 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1KeyPressed
 
     private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
+        // TODO add your handling code here:        
+    }//GEN-LAST:event_jButton1KeyPressed
+
+    private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
         // TODO add your handling code here:
-        if(new String(jPasswordField1.getPassword()).equals("admin")){
+         if (evt.getKeyCode() == KeyEvent.VK_ENTER){  
+             if(new String(jPasswordField1.getPassword()).equals("admin")){
         new Principal().setVisible(true);
         //Login.setDefaultCloseOperation(Longin.DISPOSE_ON_CLOSE);
         //login.setDefaultCloseOperation(login.EXIT_ON_CLOSE);
@@ -218,9 +229,9 @@ public class Login extends javax.swing.JFrame {
         Principal();
         }else{
         JOptionPane.showMessageDialog(null, "Login incorreto", "erro", JOptionPane.ERROR_MESSAGE);
-        }
-        
-    }//GEN-LAST:event_jButton1KeyPressed
+        } 
+        }  
+    }//GEN-LAST:event_jPasswordField1KeyPressed
 
     /**
      * @param args the command line arguments

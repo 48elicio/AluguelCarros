@@ -16,8 +16,8 @@ public class Principal extends javax.swing.JFrame {
    
     WriterLog writer = new WriterLog();
     
-    static Cadastrar cadastrar = null;
-    static Reserva reserva = null;
+    public Cadastrar cadastrar = null;
+    public Reserva reserva = null;
     static FrotaVeiculos frota = null;
     static Devolucao devolucao = null;
     static Locar locar = null;

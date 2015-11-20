@@ -1,5 +1,6 @@
 package aluguecarros.visao;
 
+import aluguecarros.controler.ReservaListener;
 import java.awt.Dimension;
 
 /**
@@ -8,6 +9,11 @@ import java.awt.Dimension;
  */
 public class Reserva extends javax.swing.JInternalFrame {
     
+    private ReservaListener listener;
+    /**
+     * Creates new form RemoveVeiculo
+     */
+    ReservaListener reserva = new ReservaListener(this);
     public Reserva() {
         initComponents();
     }
@@ -44,6 +50,8 @@ public class Reserva extends javax.swing.JInternalFrame {
         jLabel4.setText("Reserva de Carros");
 
         jButtonReservar.setText("Reservar");
+        jButtonReservar.setActionCommand("Reservar");
+        jButtonReservar.addActionListener(listener);
 
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -51,6 +59,8 @@ public class Reserva extends javax.swing.JInternalFrame {
                 jButtonCancelarActionPerformed(evt);
             }
         });
+        jButtonReservar.setActionCommand("Cancelar");
+        jButtonReservar.addActionListener(listener);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lupa.png"))); // NOI18N
 
@@ -131,13 +141,13 @@ public class Reserva extends javax.swing.JInternalFrame {
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
 
-        dispose();
+   
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButtonCancelar;
+    public javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonReservar;
     private javax.swing.JComboBox jComboBoxReservaCarros;
     private javax.swing.JFormattedTextField jFormattedTextField1;
