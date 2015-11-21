@@ -20,7 +20,8 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemClienteActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jMenuItemCliente.addActionListener(listener);&#xa;jMenuItemCliente.setActionCommand(&quot;Cliente&quot;);"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="/*"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/&#xa;jMenuItemCliente.addActionListener(listener);&#xa;jMenuItemCliente.setActionCommand(&quot;Cliente&quot;);"/>
               </AuxValues>
             </MenuItem>
           </SubComponents>
