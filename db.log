@@ -1,0 +1,3 @@
+/*C2*/SET SCHEMA PUBLIC
+CONNECT USER SA
+DROP TABLE adicionarveiculo\u000a
