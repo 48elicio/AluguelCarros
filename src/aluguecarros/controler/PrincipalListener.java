@@ -13,7 +13,6 @@ import aluguecarros.visao.Principal;
 import aluguecarros.visao.Reserva;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JFrame;
 
 /**
  *
@@ -41,7 +40,7 @@ public class PrincipalListener implements ActionListener {
             cadastrar = new Cadastrar();
             principal.jDesktopPanePrincipal.add(cadastrar);
             cadastrar.setVisible(true);
-            
+            cadastrar.setPosicao();
         }
     }
 

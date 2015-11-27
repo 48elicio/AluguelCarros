@@ -4,7 +4,6 @@ package aluguecarros.visao;
 import aluguecarros.controler.PessoaActionListener;
 import aluguecarros.modelo.Pessoa;
 import java.awt.Dimension;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JComboBox;
@@ -15,7 +14,6 @@ import javax.swing.JComboBox;
  */
 public class Cadastrar extends javax.swing.JInternalFrame {
 
-    private PessoaActionListener listener;
     private List<Pessoa> lista = new ArrayList<>();
     
     private String nome;
@@ -29,9 +27,10 @@ public class Cadastrar extends javax.swing.JInternalFrame {
     private String teste;
     PessoaActionListener ActionListener = new PessoaActionListener(this) ;
     
-    Pessoa p = new Pessoa();
+   
     public Pessoa getPessoa(){
-        //Pessoa p = new Pessoa();
+        Pessoa p = new Pessoa();
+        
         p.setNome(txtNome.getText());
         p.setSobrenome(txtSobrenome.getText());
         p.setIdade(Integer.valueOf(txtIdade.getText()));
@@ -87,14 +86,16 @@ public class Cadastrar extends javax.swing.JInternalFrame {
 
         jLabel5.setText("Sexo");
 
-        jButton1.setText("salvar");
+        jButton1.setText("Salvar");
+        jButton1.setActionCommand("Salvar");
+        jButton1.addActionListener(ActionListener);
+        /*
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jButton1.addActionListener(listener);
-        jButton1.setActionCommand("salvar");
+        */
 
         jLabel6.setText("Cidade");
 
@@ -187,11 +188,13 @@ public class Cadastrar extends javax.swing.JInternalFrame {
         jButton3.setText("Cancelar");
         jButton3.setActionCommand("Cancelar");
         jButton3.addActionListener(ActionListener);
+        /*
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        */
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -221,11 +224,11 @@ public class Cadastrar extends javax.swing.JInternalFrame {
                             .addComponent(txtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCPF)
                             .addComponent(cbSexo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton3)))))
+                            .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(jButton3)))
                 .addContainerGap(66, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -288,7 +291,8 @@ public class Cadastrar extends javax.swing.JInternalFrame {
 
     private void txtNomeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNomeFocusLost
         // TODO add your handling code here:
-       nome = txtNome.getText();
+        new Pessoa().setNome(txtNome.getText());
+        nome = txtNome.getText();
     }//GEN-LAST:event_txtNomeFocusLost
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

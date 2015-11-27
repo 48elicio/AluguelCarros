@@ -9,8 +9,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 //As exceções devem ser propagadas para a camada de apresentação, ou seja, deve ser utilizado throws em cada um dos métodos
-public class CadastrarControle {
+public class CadastrarDao {
 
+    public void salvar(Pessoa pessoa) {
+        if (exists(pessoa.getCpf())) {
+            update(pessoa);
+        } else {
+            insert(pessoa);
+        }
+    }
+    
     public void delete(Pessoa pessoa) {
         Connection conn = null;
         PreparedStatement ps = null;
@@ -57,7 +65,7 @@ public class CadastrarControle {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "insert into produtos (codigo, descricao) values(?,?)";
+            String sql = "insert into cadastro (nome) values(?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, pessoa.getCpf());
             ps.setString(2, pessoa.getNome());
@@ -104,7 +112,7 @@ public class CadastrarControle {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "update produtos set descricao = ? where codigo = ?";
+            String sql = "update cadastro set nome = ? where cpf = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, pessoa.getCpf());
             ps.setString(2, pessoa.getNome());
@@ -199,7 +207,7 @@ public class CadastrarControle {
         return lista;
     }
 
-    public Pessoa getProduto(Integer cpf) {
+    /*public Pessoa getPessoa(Integer cpf) {
         Connection conn = null;
         PreparedStatement ps = null;
         try {
@@ -246,8 +254,38 @@ public class CadastrarControle {
             }
         }
         return null;
-    }
+    }*/
 
+   public boolean exists(Integer cpf) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try {
+            conn = Conexao.getConnection();
+            String sql = "select 1 from produtos where codigo = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, cpf);
+            ResultSet rs = ps.executeQuery();
+            return rs.next();
+        } catch(SQLException e) {
+            System.out.println("ERRO: " + e.getMessage());
+        } finally {
+            if( ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                }
+            }
+            if(conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                }
+            }
+        }
+        return false;
+    }
 
 
 }

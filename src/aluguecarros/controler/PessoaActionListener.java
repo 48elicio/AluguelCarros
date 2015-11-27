@@ -1,5 +1,4 @@
 package aluguecarros.controler;
-
 /**
  *
  * @author Diego Pedro Marques
@@ -12,24 +11,28 @@ import javax.swing.JOptionPane;
 
 public class PessoaActionListener 
                 implements ActionListener{
- 
+    
     private Cadastrar cadastrar;
-
+    private CadastrarDao dao = new CadastrarDao();
+            
     public PessoaActionListener(Cadastrar a) {
         this.cadastrar = a;
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
-         if("salvar".equals(e.getActionCommand())) {
+         
+        if("Salvar".equals(e.getActionCommand())) {
+            
+            JOptionPane.showMessageDialog(cadastrar, "Salvo no Banco de ");
             Pessoa p = cadastrar.getPessoa();
-            p.salvar(p);
-           // jButton1.addActionListener(listener);
-//jButton1.setActionCommand("Cancelar");
+            
+            dao.salvar(p);
+            
         } else if("Cancelar".equals(e.getActionCommand())) {
             JOptionPane.showMessageDialog(cadastrar, "Clicou no cancelar");
             cadastrar.dispose();
-        }
+        } 
         
     }
     
