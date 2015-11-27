@@ -9,22 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 //As exceções devem ser propagadas para a camada de apresentação, ou seja, deve ser utilizado throws em cada um dos métodos
-public class CadastrarDao {
+public class CadastrarControle {
 
-    public void salvar(Pessoa pessoa) {
-        if (exists(pessoa.getCpf())) {
-            update(pessoa);
-        } else {
-            insert(pessoa);
-        }
-    }
-    
     public void delete(Pessoa pessoa) {
         Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "delete from nome where cpf = ?";
+            String sql = "delete from produtos where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, pessoa.getCpf());
             ps.execute();
@@ -65,7 +57,7 @@ public class CadastrarDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "insert into cadastro (cpf, nome, sobrenome, idade, sexo, cidade, uf) values(?,?,?,?,?,?,?)";
+            String sql = "insert into produtos (codigo, descricao) values(?,?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, pessoa.getCpf());
             ps.setString(2, pessoa.getNome());
@@ -112,7 +104,7 @@ public class CadastrarDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "update cadastro set nome = ? where cpf = ?";
+            String sql = "update produtos set descricao = ? where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, pessoa.getCpf());
             ps.setString(2, pessoa.getNome());
@@ -162,7 +154,7 @@ public class CadastrarDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select cpf, nome, sobrenome, idade, sexo, cidade, uf from cadastro";
+            String sql = "select codigo, descricao from produtos";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
@@ -207,7 +199,7 @@ public class CadastrarDao {
         return lista;
     }
 
-    /*public Pessoa getPessoa(Integer cpf) {
+    public Pessoa getProduto(Integer cpf) {
         Connection conn = null;
         PreparedStatement ps = null;
         try {
@@ -254,38 +246,8 @@ public class CadastrarDao {
             }
         }
         return null;
-    }*/
-
-   public boolean exists(Integer cpf) {
-        Connection conn = null;
-        PreparedStatement ps = null;
-        try {
-            conn = Conexao.getConnection();
-            String sql = "select 1 from cadastro where cpf = ?";
-            ps = conn.prepareStatement(sql);
-            ps.setInt(1, cpf);
-            ResultSet rs = ps.executeQuery();
-            return rs.next();
-        } catch(SQLException e) {
-            System.out.println("ERRO: " + e.getMessage());
-        } finally {
-            if( ps != null) {
-                try {
-                    ps.close();
-                } catch (SQLException ex) {
-                    System.out.println("ERRO: " + ex.getMessage());
-                }
-            }
-            if(conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException ex) {
-                    System.out.println("ERRO: " + ex.getMessage());
-                }
-            }
-        }
-        return false;
     }
+
 
 
 }
