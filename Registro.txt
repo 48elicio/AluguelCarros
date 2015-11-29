@@ -294,3 +294,15 @@ Foi aberto a janela DEVOLUCAO!
 Fri Nov 27 21:03:06 BRST 2015
 Foi aberto a janela FROTA!
 
+Sun Nov 29 05:54:04 BRST 2015
+Foi aberto a janela LOCAR!
+
+Sun Nov 29 05:54:07 BRST 2015
+Foi aberto a janela RESERVA!
+
+Sun Nov 29 05:54:11 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Sun Nov 29 05:54:20 BRST 2015
+Foi aberto a janela FROTA!
+

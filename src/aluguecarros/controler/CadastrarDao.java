@@ -112,15 +112,17 @@ public class CadastrarDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "update cadastro set nome = ? where cpf = ?";
+            String sql = "update cadastro set nome = ?, sobrenome = ?, idade = ?,"
+                    + "sexo = ?, cidade = ?, uf = ? where cpf = ?";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, pessoa.getCpf());
-            ps.setString(2, pessoa.getNome());
-            ps.setString(3, pessoa.getSobrenome());
-            ps.setInt(4, pessoa.getIdade());
-            ps.setString(5, pessoa.getSexo());
-            ps.setString(6, pessoa.getCidade());
-            ps.setString(7, pessoa.getUf());
+            
+            ps.setString(1, pessoa.getNome());
+            ps.setString(2, pessoa.getSobrenome());
+            ps.setInt(3, pessoa.getIdade());
+            ps.setString(4, pessoa.getSexo());
+            ps.setString(5, pessoa.getCidade());
+            ps.setString(6, pessoa.getUf());
+            ps.setInt(7, pessoa.getCpf());
             ps.execute();
 
             conn.commit();
