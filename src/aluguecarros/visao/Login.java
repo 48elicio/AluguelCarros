@@ -167,6 +167,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        
         if(new String(jPasswordField1.getPassword()).equals("admin")){
         new Principal().setVisible(true);
         usuario = jTextField1.getText();
@@ -276,10 +277,7 @@ public class Login extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     
     private void Principal() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    private void TelaMenu() {
-      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }

@@ -4,4 +4,5 @@ CREATE USER SA PASSWORD ""
 GRANT DBA TO SA
 SET WRITE_DELAY 10
 SET SCHEMA PUBLIC
-INSERT INTO CADASTRO VALUES(3232323,'diego','pedro',23,'Masculino','criciuma','sc')
+INSERT INTO CADASTRO VALUES(323434,'maria da gloria','pedro marques',66,'Masculino','criciuma','sc')
+INSERT INTO CADASTRO VALUES(3232323,'augusto','pedro',23,'Masculino','criciuma','sc')

@@ -4,29 +4,14 @@ package aluguecarros.visao;
 import aluguecarros.controler.PessoaActionListener;
 import aluguecarros.modelo.Pessoa;
 import java.awt.Dimension;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.JComboBox;
-
 /**
  *
  * @author Diego Pedro Marques
  */
 public class Cadastrar extends javax.swing.JInternalFrame {
 
-    private List<Pessoa> lista = new ArrayList<>();
-    
-    private String nome;
-    private String sobrenome;
-    private Integer idade;
-    private Integer cpf;
-    private String sexo;
-    private String cidade;
-    private String uf;
-    private String teste;
     PessoaActionListener ActionListener = new PessoaActionListener(this) ;
     
-   
     public Pessoa getPessoa(){
         Pessoa p = new Pessoa();
         
@@ -40,7 +25,6 @@ public class Cadastrar extends javax.swing.JInternalFrame {
         return p;
     }
     
-    //Pessoa p = new Pessoa();
     public Cadastrar() {
        
         initComponents();
@@ -61,7 +45,6 @@ public class Cadastrar extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
         txtSobrenome = new javax.swing.JTextField();
@@ -75,8 +58,11 @@ public class Cadastrar extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         txtUF = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setClosable(true);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel4.setText("CPF");
 
@@ -84,17 +70,6 @@ public class Cadastrar extends javax.swing.JInternalFrame {
         jLabel8.setText("Cadastrar Cliente");
 
         jLabel5.setText("Sexo");
-
-        jButton1.setText("Salvar");
-        jButton1.setActionCommand("Salvar");
-        jButton1.addActionListener(ActionListener);
-        /*
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        */
 
         jLabel6.setText("Cidade");
 
@@ -184,17 +159,6 @@ public class Cadastrar extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton3.setText("Cancelar");
-        jButton3.setActionCommand("Cancelar");
-        jButton3.addActionListener(ActionListener);
-        /*
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        */
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -204,32 +168,25 @@ public class Cadastrar extends javax.swing.JInternalFrame {
                 .addComponent(jLabel8)
                 .addGap(92, 92, 92))
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                        .addComponent(jButton3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtUF, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNome)
-                            .addComponent(txtSobrenome)
-                            .addComponent(cbSexo, 0, 172, Short.MAX_VALUE)
-                            .addComponent(txtCidade)
-                            .addComponent(txtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCPF))))
-                .addContainerGap(56, Short.MAX_VALUE))
+                    .addComponent(txtUF, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNome)
+                    .addComponent(txtSobrenome)
+                    .addComponent(cbSexo, 0, 172, Short.MAX_VALUE)
+                    .addComponent(txtCidade)
+                    .addComponent(txtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCPF))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,18 +221,43 @@ public class Cadastrar extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtUF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addGap(44, 44, 44)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
+
+        jButton3.setText("Cancelar");
+        jButton3.setActionCommand("Cancelar");
+        jButton3.addActionListener(ActionListener);
+        /*
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        */
+
+        jButton1.setText("Salvar");
+        jButton1.setActionCommand("Salvar");
+        jButton1.addActionListener(ActionListener);
+        /*
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        */
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(56, 56, 56))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -283,115 +265,79 @@ public class Cadastrar extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 9, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton1))
+                .addGap(0, 20, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNomeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNomeFocusLost
-        // TODO add your handling code here:
-        new Pessoa().setNome(txtNome.getText());
-        nome = txtNome.getText();
+        
     }//GEN-LAST:event_txtNomeFocusLost
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-       // Integer codigo = Integer.parseInt(jTextField1.getText());
-        //String nome = jTextField2.getText();
         
-        //Pessoa p = new Pessoa(nome,sobrenome, idade, cpf, sexo,cidade,uf);
-        
-        
-       // lista.add(p);
-       // p.salvar(p);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        // TODO add your handling code here:
-        nome = txtNome.getText();
+        
         
     }//GEN-LAST:event_txtNomeActionPerformed
 
     private void txtSobrenomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSobrenomeActionPerformed
-        // TODO add your handling code here:
-        sobrenome = txtSobrenome.getText();
+        
     }//GEN-LAST:event_txtSobrenomeActionPerformed
 
     private void txtIdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdadeActionPerformed
-        // TODO add your handling code here:
-       idade = Integer.parseInt(txtIdade.getText());
+        
     }//GEN-LAST:event_txtIdadeActionPerformed
 
     private void txtSobrenomeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtSobrenomeFocusLost
-        // TODO add your handling code here:
-        sobrenome = txtSobrenome.getText();
+        
     }//GEN-LAST:event_txtSobrenomeFocusLost
 
     private void txtIdadeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtIdadeFocusLost
-        // TODO add your handling code here:
-        idade = Integer.parseInt(txtIdade.getText());
+        
     }//GEN-LAST:event_txtIdadeFocusLost
 
     private void txtCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCPFActionPerformed
-        // TODO add your handling code here:
-        cpf = Integer.parseInt(txtCPF.getText());
+        
     }//GEN-LAST:event_txtCPFActionPerformed
 
     private void txtCPFFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCPFFocusLost
-        // TODO add your handling code here:
-        cpf = Integer.parseInt(txtCPF.getText());
+        
     }//GEN-LAST:event_txtCPFFocusLost
 
     private void cbSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSexoActionPerformed
-        // TODO add your handling code here:
-        JComboBox x= (JComboBox)evt.getSource();
-        //jComboBox1ActionPerformed(evt);
-        //jComboBox1.getSelectedItem();
-        //jComboBox1.getSelectedIndex();
-        teste=(String)x.getSelectedItem();
-        //sexo= teste;
-        if(x.getSelectedItem().equals("Masculino")){
-        sexo= "Masculino";
-        } else{
-        sexo= "Feminino";
-        } 
-        
+         
     }//GEN-LAST:event_cbSexoActionPerformed
 
     private void txtCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCidadeActionPerformed
-        // TODO add your handling code here:
-         cidade = txtCidade.getText();
+        
     }//GEN-LAST:event_txtCidadeActionPerformed
 
     private void txtUFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUFActionPerformed
-        // TODO add your handling code here:
-         uf = txtUF.getText();
+        
     }//GEN-LAST:event_txtUFActionPerformed
 
     private void txtCidadeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCidadeFocusLost
-        // TODO add your handling code here:
-        cidade = txtCidade.getText();
+        
     }//GEN-LAST:event_txtCidadeFocusLost
 
     private void txtUFFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUFFocusLost
-        // TODO add your handling code here:
-         uf = txtUF.getText();
+        
     }//GEN-LAST:event_txtUFFocusLost
 
     private void cbSexoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cbSexoFocusLost
-        // TODO add your handling code here:
-        JComboBox x= (JComboBox)evt.getSource();
-        teste=(String)x.getSelectedItem();
-        if(x.getSelectedItem().equals("Masculino")){
-        sexo= "Masculino";
-        } else{
-        sexo= "Feminino";
-        } 
+        
     }//GEN-LAST:event_cbSexoFocusLost
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
 

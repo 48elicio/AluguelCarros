@@ -306,3 +306,231 @@ Foi aberto a janela DEVOLUCAO!
 Sun Nov 29 05:54:20 BRST 2015
 Foi aberto a janela FROTA!
 
+Wed Dec 02 16:35:07 BRST 2015
+Foi aberto a janela FROTA!
+
+Wed Dec 02 16:41:26 BRST 2015
+Foi aberto a janela FROTA!
+
+Wed Dec 02 16:41:29 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 16:41:36 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 16:42:11 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 16:48:13 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 16:48:26 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 16:48:29 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 16:49:09 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 16:49:10 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 16:49:11 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 16:54:13 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 16:54:18 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 16:54:22 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 16:56:33 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 16:57:25 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 16:57:43 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 16:58:01 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 16:58:27 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:02:16 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:02:22 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:02:51 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:08:54 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:10:08 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:11:41 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:12:21 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:14:02 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:14:04 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:15:23 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:15:36 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:15:38 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:15:40 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:16:09 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:16:12 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:17:23 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:17:29 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:17:37 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:17:39 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:17:43 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:17:49 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:17:53 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:18:14 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:18:16 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:18:18 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:18:21 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:18:24 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:18:26 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:18:31 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:18:32 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:19:09 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:19:14 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:19:23 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:21:05 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:21:08 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:21:32 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:22:19 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:22:56 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:23:01 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:23:11 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:23:13 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:27:38 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:27:45 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:27:47 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:28:29 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:28:40 BRST 2015
+Foi aberto a janela FROTA!
+
+Wed Dec 02 17:29:37 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:29:42 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:29:51 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:30:07 BRST 2015
+Foi aberto a janela FROTA!
+
+Wed Dec 02 17:32:43 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:33:07 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:33:09 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:33:41 BRST 2015
+Foi aberto a janela RESERVA!
+
+Wed Dec 02 17:33:50 BRST 2015
+Foi aberto a janela LOCAR!
+
+Wed Dec 02 17:33:55 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Wed Dec 02 17:34:15 BRST 2015
+Foi aberto a janela FROTA!
+

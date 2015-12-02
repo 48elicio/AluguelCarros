@@ -24,13 +24,14 @@ public class PessoaActionListener
          
         if("Salvar".equals(e.getActionCommand())) {
             
-            JOptionPane.showMessageDialog(cadastrar, "Salvo no Banco de ");
+            JOptionPane.showMessageDialog(cadastrar, "Cadastro efetuado com sucesso!");
             Pessoa p = cadastrar.getPessoa();
             
             dao.salvar(p);
+            cadastrar.dispose();
             
         } else if("Cancelar".equals(e.getActionCommand())) {
-            JOptionPane.showMessageDialog(cadastrar, "Clicou no cancelar");
+            //JOptionPane.showMessageDialog(cadastrar, "Clicou no cancelar");
             cadastrar.dispose();
         } 
         
