@@ -5,4 +5,10 @@ GRANT DBA TO SA
 SET WRITE_DELAY 10
 SET SCHEMA PUBLIC
 INSERT INTO CADASTRO VALUES(323434,'maria da gloria','pedro marques',66,'Masculino','criciuma','sc')
+INSERT INTO CADASTRO VALUES(343434,'Valmir','Rosso',34,'Masculino','criciuma','sc')
+INSERT INTO CADASTRO VALUES(878787,'jailton','marques',55,'Masculino','criciuma','sc')
+INSERT INTO CADASTRO VALUES(2334443,'emerson','freitas',12,'Masculino','criciuma','sc')
 INSERT INTO CADASTRO VALUES(3232323,'augusto','pedro',23,'Masculino','criciuma','sc')
+INSERT INTO CADASTRO VALUES(3345545,'Edinaldo','Rossa',23,'Masculino','criciuma','sc')
+INSERT INTO CADASTRO VALUES(5435345,'cleison','donato',43,'Masculino','icara','sc')
+INSERT INTO CADASTRO VALUES(32445234,'Domerval','castro',34,'Masculino','icara','sc')
