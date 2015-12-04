@@ -22,7 +22,7 @@ public class LocarActionListener implements ActionListener{
            
        } else if("Cancelar".equals(e.getActionCommand())) {
            
-           JOptionPane.showMessageDialog(locar, "Deseja mesmo sair?");
+           //JOptionPane.showMessageDialog(locar, "Deseja mesmo sair?");
            locar.dispose();
         
         }

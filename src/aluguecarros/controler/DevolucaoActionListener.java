@@ -22,7 +22,7 @@ public class DevolucaoActionListener implements ActionListener{
            
        } else if("Sair".equals(e.getActionCommand())) {
            
-           JOptionPane.showMessageDialog(devolucao, "Deseja mesmo sair?");
+           //JOptionPane.showMessageDialog(devolucao, "Deseja mesmo sair?");
            devolucao.dispose();
         
         }

@@ -10,6 +10,7 @@ import java.util.List;
 
 public class FrotaDao {
     
+    
     public void salvar(Carros carros) {
         if (exists(carros.getCod())) {
             update(carros);
@@ -18,13 +19,30 @@ public class FrotaDao {
         }
     }
     
+    public void deletar(Carros carros){
+       if (exists(carros.getCod())) {
+            delete(carros);
+        } else {
+            
+        }
+    }
+    
     public void delete(Carros carros) {
         Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "delete from nome where cod = ?";
+            String sql = "delete from frota where cod = ?";
             ps = conn.prepareStatement(sql);
+            /*
+            ps.setString(1, carros.getFabricante());
+            
+            ps.setInt(3, carros.getAno());
+            ps.setString(4, carros.getPortas());
+            ps.setString(5, carros.getCambio());
+            ps.setString(6, carros.getConfiguracao());
+            */
+            //ps.setString(1, carros.getModelo());
             ps.setInt(1, carros.getCod());
             ps.execute();
 

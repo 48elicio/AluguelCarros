@@ -22,7 +22,7 @@ public class ReservaActionListener implements ActionListener {
            
        } else if("Cancelar".equals(e.getActionCommand())) {
            
-           JOptionPane.showMessageDialog(reserva, "Deseja mesmo sair?");
+           //JOptionPane.showMessageDialog(reserva, "Deseja mesmo sair?");
            reserva.dispose();
         
         }

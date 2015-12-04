@@ -31,7 +31,12 @@ public class FrotaActionListener implements ActionListener{
             //JOptionPane.showMessageDialog(frota, "CANCELAR");
             frota.dispose();
             
-        } 
-    
+        } else if("Deletar".equals(e.getActionCommand())) {
+            
+            JOptionPane.showMessageDialog(frota, "Opção indisponivel no momento!");
+            //Carros c = frota.getCarros();
+            //dao.deletar(c);
+            //frota.dispose();
+        }
     }
 }
