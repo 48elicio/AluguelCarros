@@ -1,6 +1,6 @@
 package aluguecarros.visao;
 
-import aluguecarros.controler.ReservaListener;
+import aluguecarros.controler.ReservaActionListener;
 import java.awt.Dimension;
 
 /**
@@ -9,11 +9,8 @@ import java.awt.Dimension;
  */
 public class Reserva extends javax.swing.JInternalFrame {
     
-    private ReservaListener listener;
-    /**
-     * Creates new form RemoveVeiculo
-     */
-    ReservaListener reserva = new ReservaListener(this);
+    ReservaActionListener ActionListener = new ReservaActionListener(this) ;
+    
     public Reserva() {
         initComponents();
     }
@@ -52,16 +49,18 @@ public class Reserva extends javax.swing.JInternalFrame {
 
         jButtonReservar.setText("Reservar");
         jButtonReservar.setActionCommand("Reservar");
-        jButtonReservar.addActionListener(listener);
+        jButtonReservar.addActionListener(ActionListener);
 
         jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.setActionCommand("Cancelar");
+        jButtonCancelar.addActionListener(ActionListener);
+        /*
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCancelarActionPerformed(evt);
             }
         });
-        jButtonReservar.setActionCommand("Cancelar");
-        jButtonReservar.addActionListener(listener);
+        */
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lupa.png"))); // NOI18N
 

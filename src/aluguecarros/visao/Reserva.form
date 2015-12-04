@@ -177,7 +177,7 @@
             <Property name="text" type="java.lang.String" value="Reservar"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonReservar.setActionCommand(&quot;Reservar&quot;);&#xa;jButtonReservar.addActionListener(listener);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonReservar.setActionCommand(&quot;Reservar&quot;);&#xa;jButtonReservar.addActionListener(ActionListener);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonCancelar">
@@ -188,7 +188,8 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCancelarActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jButtonReservar.setActionCommand(&quot;Cancelar&quot;);&#xa;jButtonReservar.addActionListener(listener);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButtonCancelar.setActionCommand(&quot;Cancelar&quot;);&#xa;jButtonCancelar.addActionListener(ActionListener);&#xa;/*"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>

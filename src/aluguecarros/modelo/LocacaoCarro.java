@@ -7,8 +7,8 @@ public class LocacaoCarro {
     
     private String BuscaCliente;
     private String ListaCarro;
-    private Integer DataLoc; //data de locação
-    private Integer DataDev; //data de devolução
+    private Integer DataLoc;
+    private Integer DataDev;
     private List<LocacaoCarro> lista = new ArrayList<>();
     
     public LocacaoCarro(){

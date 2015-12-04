@@ -1,12 +1,8 @@
 package aluguecarros.visao;
 
 
-import aluguecarros.controler.PrincipalListener;
+import aluguecarros.controler.PrincipalActionListener;
 import aluguecarros.arquivo.WriterLog;
-import aluguecarros.modelo.Pessoa;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -17,8 +13,7 @@ public class Principal extends javax.swing.JFrame {
    
     WriterLog writer = new WriterLog();
     
-    private PrincipalListener listener = new PrincipalListener(this);
-    
+    private PrincipalActionListener listener = new PrincipalActionListener(this);
     
     public Cadastrar cadastrar = null;
     public Reserva reserva = null;
@@ -88,27 +83,39 @@ public class Principal extends javax.swing.JFrame {
         jMenuMovimentacao.setText("Movimentação");
 
         jMenuItemLocacao.setText("Locação");
+        jMenuItemLocacao.addActionListener(listener);
+        jMenuItemLocacao.setActionCommand("Locação");
+        /*
         jMenuItemLocacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemLocacaoActionPerformed(evt);
             }
         });
+        */
         jMenuMovimentacao.add(jMenuItemLocacao);
 
         jMenuItemReserva.setText("Reserva");
+        jMenuItemReserva.addActionListener(listener);
+        jMenuItemReserva.setActionCommand("Reserva");
+        /*
         jMenuItemReserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemReservaActionPerformed(evt);
             }
         });
+        */
         jMenuMovimentacao.add(jMenuItemReserva);
 
         jMenuItemDevolucao.setText("Devolução");
+        jMenuItemDevolucao.addActionListener(listener);
+        jMenuItemDevolucao.setActionCommand("Devolução");
+        /*
         jMenuItemDevolucao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemDevolucaoActionPerformed(evt);
             }
         });
+        */
         jMenuMovimentacao.add(jMenuItemDevolucao);
 
         jMenuBarPrincipal.add(jMenuMovimentacao);
@@ -147,65 +154,26 @@ public class Principal extends javax.swing.JFrame {
 
     private void jMenuItemReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReservaActionPerformed
         
-        if (reserva == null) {
-            reserva = new Reserva();
-            jDesktopPanePrincipal.add(reserva);
-        }
-        reserva.setVisible(true);
-        reserva.setPosicao();
-        
-        try {
-            WriterLog.escrever("Foi aberto a janela RESERVA!");
-        } catch (IOException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       
     }//GEN-LAST:event_jMenuItemReservaActionPerformed
-/*
+
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
 
     }//GEN-LAST:event_jMenuItemClienteActionPerformed
 
-    
     private void jMenuItemFrotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFrotaActionPerformed
         
     }//GEN-LAST:event_jMenuItemFrotaActionPerformed
-*/
+
     private void jMenuItemDevolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDevolucaoActionPerformed
-        
-        if (devolucao == null) {
-            devolucao = new Devolucao();
-            jDesktopPanePrincipal.add(devolucao);
-        }
-        devolucao.setVisible(true);
-        devolucao.setPosicao();
-        
-        try {
-            WriterLog.escrever("Foi aberto a janela DEVOLUCAO!");
-        } catch (IOException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+  
     }//GEN-LAST:event_jMenuItemDevolucaoActionPerformed
 
     private void jMenuItemLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemLocacaoActionPerformed
-        
-        if (locar == null) {
-            locar = new Locar();
-            jDesktopPanePrincipal.add(locar);
-        }
-        locar.setVisible(true);
-        locar.setPosicao();
-        
-        try {
-            WriterLog.escrever("Foi aberto a janela LOCAR!");
-        } catch (IOException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    
     }//GEN-LAST:event_jMenuItemLocacaoActionPerformed
     
     private void jMenuCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastrarActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jMenuCadastrarActionPerformed
 
     /**
@@ -256,7 +224,5 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuMovimentacao;
     // End of variables declaration//GEN-END:variables
 
-    public Pessoa getPessoa() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+    
 }

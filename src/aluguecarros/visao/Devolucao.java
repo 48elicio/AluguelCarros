@@ -1,5 +1,6 @@
 package aluguecarros.visao;
 
+import aluguecarros.controler.DevolucaoActionListener;
 import java.awt.Dimension;
 
 /**
@@ -7,7 +8,10 @@ import java.awt.Dimension;
  * @author Diego Pedro Marques
  */
 public class Devolucao extends javax.swing.JInternalFrame {
-
+    
+    //PessoaActionListener ActionListener = new PessoaActionListener(this) ;
+    DevolucaoActionListener ActionListener = new DevolucaoActionListener(this);
+    
     public Devolucao() {
         initComponents();
     }
@@ -55,13 +59,19 @@ public class Devolucao extends javax.swing.JInternalFrame {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/lupa.png"))); // NOI18N
 
         jButtonDevolucaoFinalizar.setText("Finalizar");
+        jButtonDevolucaoFinalizar.setActionCommand("Finalizar");
+        jButtonDevolucaoFinalizar.addActionListener(ActionListener);
 
         jButtonDevolucaoSair.setText("Sair");
+        jButtonDevolucaoSair.setActionCommand("Sair");
+        jButtonDevolucaoSair.addActionListener(ActionListener);
+        /*
         jButtonDevolucaoSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDevolucaoSairActionPerformed(evt);
             }
         });
+        */
 
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "<nenhuma>" };

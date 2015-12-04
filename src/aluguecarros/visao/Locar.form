@@ -242,11 +242,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Locar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButton2.setActionCommand(&quot;Locar&quot;);&#xa;jButton2.addActionListener(ActionListener);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jButton3.setActionCommand(&quot;Cancelar&quot;);&#xa;jButton3.addActionListener(ActionListener);"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

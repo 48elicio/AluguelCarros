@@ -1,28 +1,13 @@
 package aluguecarros.visao;
 
 
-import aluguecarros.modelo.Pessoa;
+import aluguecarros.controler.LocarActionListener;
 import java.awt.Dimension;
-import java.util.ArrayList;
-import java.util.List;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Usuário
- */
 public class Locar extends javax.swing.JInternalFrame {
-
-    /**
-     * Creates new form Locar
-     */
     
-    private List<Pessoa> teste = new ArrayList<>();
+    LocarActionListener ActionListener = new LocarActionListener(this) ;
     
     public Locar() {
         initComponents();
@@ -167,8 +152,12 @@ public class Locar extends javax.swing.JInternalFrame {
         jLabel6.setText("Locação");
 
         jButton2.setText("Locar");
+        jButton2.setActionCommand("Locar");
+        jButton2.addActionListener(ActionListener);
 
         jButton3.setText("Cancelar");
+        jButton3.setActionCommand("Cancelar");
+        jButton3.addActionListener(ActionListener);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
