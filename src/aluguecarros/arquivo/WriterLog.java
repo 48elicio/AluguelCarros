@@ -1,5 +1,5 @@
 
-package aluguecarros.controler;
+package aluguecarros.arquivo;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

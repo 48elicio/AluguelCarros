@@ -41,7 +41,13 @@ public class PrincipalListener implements ActionListener {
             principal.jDesktopPanePrincipal.add(cadastrar);
             cadastrar.setVisible(true);
             cadastrar.setPosicao();
-        }
+        
+        } else if("Frota".equals(e.getActionCommand())) {
+            frota = new FrotaVeiculos();
+            principal.jDesktopPanePrincipal.add(frota);
+            frota.setVisible(true);
+            frota.setPosicao();
+        } 
     }
 
 }

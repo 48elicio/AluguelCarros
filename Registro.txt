@@ -603,3 +603,57 @@ Foi aberto a janela FROTA!
 Thu Dec 03 05:36:13 BRST 2015
 Foi aberto a janela FROTA!
 
+Thu Dec 03 14:23:00 BRST 2015
+Foi aberto a janela LOCAR!
+
+Thu Dec 03 14:23:04 BRST 2015
+Foi aberto a janela RESERVA!
+
+Thu Dec 03 14:23:11 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Thu Dec 03 14:23:29 BRST 2015
+Foi aberto a janela FROTA!
+
+Thu Dec 03 14:43:14 BRST 2015
+Foi aberto a janela LOCAR!
+
+Thu Dec 03 14:43:19 BRST 2015
+Foi aberto a janela RESERVA!
+
+Thu Dec 03 14:43:24 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Thu Dec 03 14:43:26 BRST 2015
+Foi aberto a janela FROTA!
+
+Thu Dec 03 14:44:28 BRST 2015
+Foi aberto a janela LOCAR!
+
+Thu Dec 03 14:44:48 BRST 2015
+Foi aberto a janela RESERVA!
+
+Thu Dec 03 14:44:58 BRST 2015
+Foi aberto a janela DEVOLUCAO!
+
+Thu Dec 03 14:45:11 BRST 2015
+Foi aberto a janela FROTA!
+
+Thu Dec 03 16:39:12 BRST 2015
+Foi aberto a janela FROTA!
+
+Thu Dec 03 16:41:27 BRST 2015
+Foi aberto a janela FROTA!
+
+Thu Dec 03 16:45:06 BRST 2015
+Foi aberto a janela FROTA!
+
+Thu Dec 03 16:47:49 BRST 2015
+Foi aberto a janela FROTA!
+
+Thu Dec 03 17:09:42 BRST 2015
+Foi aberto a janela FROTA!
+
+Thu Dec 03 17:16:32 BRST 2015
+Foi aberto a janela FROTA!
+

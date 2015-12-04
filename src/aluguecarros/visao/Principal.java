@@ -2,7 +2,7 @@ package aluguecarros.visao;
 
 
 import aluguecarros.controler.PrincipalListener;
-import aluguecarros.controler.WriterLog;
+import aluguecarros.arquivo.WriterLog;
 import aluguecarros.modelo.Pessoa;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -16,7 +16,10 @@ import java.util.logging.Logger;
 public class Principal extends javax.swing.JFrame {
    
     WriterLog writer = new WriterLog();
+    
     private PrincipalListener listener = new PrincipalListener(this);
+    
+    
     public Cadastrar cadastrar = null;
     public Reserva reserva = null;
     static FrotaVeiculos frota = null;
@@ -113,11 +116,15 @@ public class Principal extends javax.swing.JFrame {
         jMenuLista.setText("Lista");
 
         jMenuItemFrota.setText("Frota");
+        jMenuItemFrota.addActionListener(listener);
+        jMenuItemFrota.setActionCommand("Frota");
+        /*
         jMenuItemFrota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemFrotaActionPerformed(evt);
             }
         });
+        */
         jMenuLista.add(jMenuItemFrota);
 
         jMenuBarPrincipal.add(jMenuLista);
@@ -158,23 +165,12 @@ public class Principal extends javax.swing.JFrame {
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
 
     }//GEN-LAST:event_jMenuItemClienteActionPerformed
-*/
+
+    
     private void jMenuItemFrotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFrotaActionPerformed
         
-        if (frota == null) {
-            frota = new FrotaVeiculos();
-            jDesktopPanePrincipal.add(frota);
-        }
-        frota.setVisible(true);
-        frota.setPosicao();
-        
-        try {
-            WriterLog.escrever("Foi aberto a janela FROTA!");
-        } catch (IOException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }//GEN-LAST:event_jMenuItemFrotaActionPerformed
-
+*/
     private void jMenuItemDevolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDevolucaoActionPerformed
         
         if (devolucao == null) {

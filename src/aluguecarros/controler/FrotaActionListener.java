@@ -10,7 +10,7 @@ public class FrotaActionListener implements ActionListener{
     
     
     private FrotaVeiculos frota;
-    //private FrotaDao dao = new FrotaDao();
+    private FrotaDao dao = new FrotaDao();
     
     public FrotaActionListener(FrotaVeiculos a) {
         this.frota = a;
@@ -21,15 +21,15 @@ public class FrotaActionListener implements ActionListener{
          
         if("Salvar".equals(e.getActionCommand())) {
             
-            JOptionPane.showMessageDialog(frota, "INSERIR");
-            //Carros c = frota.getCarros();
+            JOptionPane.showMessageDialog(frota, "Salvo com sucesso!");
+            Carros c = frota.getCarros();
             
-            //dao.salvar(c);
+            dao.salvar(c);
             //frota.dispose();
             
         } else if("Cancelar".equals(e.getActionCommand())) {
-            JOptionPane.showMessageDialog(frota, "CANCELAR");
-            //frota.dispose();
+            //JOptionPane.showMessageDialog(frota, "CANCELAR");
+            frota.dispose();
             
         } 
     

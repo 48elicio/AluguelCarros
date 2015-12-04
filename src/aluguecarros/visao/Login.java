@@ -1,8 +1,8 @@
 package aluguecarros.visao;
 
 
-import aluguecarros.controler.ReaderObjectToFile;
-import aluguecarros.controler.WriteObjectToFile;
+import aluguecarros.arquivo.ReaderObjectToFile;
+import aluguecarros.arquivo.WriteObjectToFile;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 

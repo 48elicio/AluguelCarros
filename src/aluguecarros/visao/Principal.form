@@ -69,6 +69,10 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemFrotaActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jMenuItemFrota.addActionListener(listener);&#xa;jMenuItemFrota.setActionCommand(&quot;Frota&quot;);&#xa;/*"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="*/"/>
+              </AuxValues>
             </MenuItem>
           </SubComponents>
         </Menu>
