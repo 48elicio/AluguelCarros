@@ -85,4 +85,11 @@ public class Carros {
     public void setConfiguracao(String configuracao) {
         this.configuracao = configuracao;
     }
+
+    @Override
+    public String toString() {
+        return "Carros{" + "cod=" + cod + ", modelo=" + modelo + ", fabricante=" + fabricante + ", ano=" + ano + '}';
+    }
+    
+    
 }

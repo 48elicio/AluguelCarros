@@ -19,13 +19,6 @@ public class FrotaDao {
         }
     }
     
-    public void deletar(Carros carros){
-       if (exists(carros.getCod())) {
-            delete(carros);
-        } else {
-            
-        }
-    }
     
     public void delete(Carros carros) {
         Connection conn = null;
@@ -34,6 +27,8 @@ public class FrotaDao {
             conn = Conexao.getConnection();
             String sql = "delete from frota where cod = ?";
             ps = conn.prepareStatement(sql);
+            ps.setInt(1, carros.getCod());
+            
             /*
             ps.setString(1, carros.getFabricante());
             
@@ -43,7 +38,7 @@ public class FrotaDao {
             ps.setString(6, carros.getConfiguracao());
             */
             //ps.setString(1, carros.getModelo());
-            ps.setInt(1, carros.getCod());
+            
             ps.execute();
 
             conn.commit();
@@ -181,18 +176,18 @@ public class FrotaDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select cod, fabricante, modelo, ano, portas, cambio, configuracao from frota";
+            String sql = "select * from frota";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
             while(rs.next()) {
-                Integer cod = rs.getInt(1);
-                String fabricante = rs.getString(2);
-                String modelo = rs.getString(3);
-                Integer ano = rs.getInt(4);
-                String portas = rs.getString(5);
-                String cambio = rs.getString(6);
-                String configuracao = rs.getString(7);
+                Integer cod = rs.getInt("cod");
+                String fabricante = rs.getString("fabricante");
+                String modelo = rs.getString("modelo");
+                Integer ano = rs.getInt("ano");
+                String portas = rs.getString("portas");
+                String cambio = rs.getString("cambio");
+                String configuracao = rs.getString("configuracao");
                 
                 Carros c = new Carros();
                 c.setCod(cod);

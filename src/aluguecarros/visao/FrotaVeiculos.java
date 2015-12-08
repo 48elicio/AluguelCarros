@@ -1,8 +1,10 @@
 package aluguecarros.visao;
 
 import aluguecarros.controler.FrotaActionListener;
+import aluguecarros.controler.FrotaDao;
 import aluguecarros.modelo.Carros;
 import java.awt.Dimension;
+import java.util.List;
 /**
  *
  * @author Diego
@@ -28,6 +30,19 @@ public class FrotaVeiculos extends javax.swing.JInternalFrame {
     
     public FrotaVeiculos() {
         initComponents();
+        btPesquisar.addActionListener(ActionListener);
+        btPesquisar.setActionCommand("pesquisar");
+    }
+    
+    public void ChamarJlist(List<Carros> c){
+        jList1.setListData(c.toArray());
+    }
+    
+    public void DeletarVeiculo(){
+        Carros carro = (Carros) jList1.getSelectedValue();
+        FrotaDao dao = new FrotaDao();
+        dao.delete(carro);
+        System.out.println("DELETADO.");
     }
 
     /**
@@ -56,8 +71,9 @@ public class FrotaVeiculos extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        btPesquisar = new javax.swing.JToggleButton();
         jLabel8 = new javax.swing.JLabel();
         txtCod = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
@@ -104,10 +120,9 @@ public class FrotaVeiculos extends javax.swing.JInternalFrame {
         jButton3.setActionCommand("Cancelar");
         jButton3.addActionListener(ActionListener);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("********* OBSERVAÇÃO *********\n\n* Clicando em **Salvar** as informações \n  inseridas nos campos acima será destinada \n  ao Banco de Dados interno do Programa!\n\n* Para deletar dados no Banco de Dados \n  basta apenas digitar o numero do \"Codigo\" \n  do carro e clicar em **Deletar**.\n\n* Para sair dessa janela de Cadastro basta \n  apenas clicar em **Cancelar**.\n\n*********************************");
-        jScrollPane2.setViewportView(jTextArea1);
+        jScrollPane1.setViewportView(jList1);
+
+        btPesquisar.setText("Pesquisar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -115,28 +130,32 @@ public class FrotaVeiculos extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                    .addComponent(btPesquisar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(jButton1)
-                .addGap(34, 34, 34)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(39, 39, 39))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2)
-                .addContainerGap())
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btPesquisar)
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton1)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                        .addComponent(jButton3)
+                        .addGap(39, 39, 39))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())))
         );
 
         jLabel8.setText("Codigo");
@@ -227,7 +246,7 @@ public class FrotaVeiculos extends javax.swing.JInternalFrame {
                     .addComponent(cbPortas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbCambio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbConfiguracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addComponent(jLabel9)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -244,6 +263,7 @@ public class FrotaVeiculos extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton btPesquisar;
     private javax.swing.JComboBox cbCambio;
     private javax.swing.JComboBox cbConfiguracao;
     private javax.swing.JComboBox cbPortas;
@@ -259,9 +279,9 @@ public class FrotaVeiculos extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JList jList1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtAno;
     private javax.swing.JTextField txtCod;
     private javax.swing.JTextField txtFabricante;
